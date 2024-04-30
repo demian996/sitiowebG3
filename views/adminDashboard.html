@@ -1,11 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../static/images/logo-icon.png"></link>
+    <link rel="stylesheet" type="text/css" href="../static/css/firstAdminStyle.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    
+    <!--Sidebar-->
+    <div class="sidebar-admin-primary">
+        <div class="sidebar-logo">
+            <a>
+                <img src="../static/images/logo.png"></img>
+            </a>
+        </div>
+
+        <h1 class="title">
+            <span class="title-icon">
+                <img src="../static/images/universal-access.png" />
+            </span>
+            <span class="title">Accesibilidad</span>
+        </h1>
+        <div class="sidebar-menu">
+            <nav>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link" outcome="toDashboard">
+                            <span class="title-icon">
+                                <img src="../static/images/dashboard.png" />
+                            </span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/report.png" />
+                            </span>
+                            <span class="title">Reportes</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/user-account.png" />
+                            </span>
+                            <span class="title">Perfil</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/logout-2.png" />
+                            </span>
+                            <span class="title">Cerrar Sesión</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1 class="title">
+            <span class="title-icon">
+                <img src="../static/images/configuration-gear.png" />
+            </span>
+            <span class="title">Gestión</span>
+        </h1>
+        <div class="sidebar-menu">
+            <nav>
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Categorías</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Códigos</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Criterio-Devolución</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Descuento</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Estado-Pedido</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Facturas</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">IVA</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Método-Pago</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Negocio</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Productos</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Proveedores</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Usuarios</span>
+                        </a>
+                    </li>
+                    <li
+                        class="sidebar-nav-item">
+                        <a class="sidebar-nav-item__link">
+                            <span class="title-icon">
+                                <img src="../static/images/category.png" />
+                            </span>
+                            <span class="title">Roles</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="header-admin-primary">
+            <div class="user-image">
+                <img src='../static/images/1130469.png' />
+            </div>
+
+            <div class="search-input-box">
+                <div class="search-input-box__item">
+                    <input id="search-input" type="text" placeholder="Buscar" />
+                    <img id="search-img" src="../static/images/search-regular-60.png" />
+                </div>
+            </div>
+
+            <div class="toggle">
+                <img src="../static/images/menu-logo.png" />
+            </div>
+        </div>
+
+        <div class="container-admin">
+
+        </div>
+    </div>
 </body>
+
 </html>
