@@ -1,4 +1,4 @@
-name: CI/CD
+name: Deploy Static Site to Railway
 
 on:
   push:
@@ -14,15 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies (if needed)
-        run: npm ci  # O npm install, si no usas lockfile
-
-      - name: Deploy to Railway (modern CLI)
+      - name: Deploy to Railway (Static Site)
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: npx @railway/cli up --service my-service
