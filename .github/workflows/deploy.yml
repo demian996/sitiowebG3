@@ -19,4 +19,3 @@ jobs:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       with:
         service: "my-service"
-        detach: true
