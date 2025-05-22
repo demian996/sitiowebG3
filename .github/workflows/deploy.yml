@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Railway CLI
-        run: npm install -g railway
+      - name: Install dependencies (if needed)
+        run: npm ci  # O npm install, si no usas lockfile
 
-      - name: Deploy to Railway
+      - name: Deploy to Railway (modern CLI)
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --service my-service
+        run: npx @railway/cli up --service my-service
