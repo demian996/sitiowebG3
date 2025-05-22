@@ -1,0 +1,22 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main, master ]  # Se activa en push a main o master
+  pull_request:
+    branches: [ main, master ]  # También en PRs hacia estas ramas
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: deploy Railway
+      uses: bervProject/railway-deploy@main
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      with:
+        service: "my-service"
+        detach: true
