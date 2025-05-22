@@ -2,20 +2,27 @@ name: CI/CD
 
 on:
   push:
-    branches: [ main, master ]  # Se activa en push a main o master
+    branches: [ main, master ]
   pull_request:
-    branches: [ main, master ]  # También en PRs hacia estas ramas
+    branches: [ main, master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    - name: deploy Railway
-      uses: bervProject/railway-deploy@main
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-      with:
-        service: "my-service"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Railway CLI
+        run: npm install -g railway
+
+      - name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service my-service
