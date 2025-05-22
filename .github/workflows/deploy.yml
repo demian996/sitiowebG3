@@ -17,4 +17,5 @@ jobs:
       - name: Deploy to Railway (Static Site)
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: npx @railway/cli up --sitiowebG3
+        run: npx @railway/cli up --service sitiowebG3
+
